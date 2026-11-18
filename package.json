@@ -1,0 +1,21 @@
+{
+  "name": "makeup-store-e2e-tests",
+  "version": "1.0.0",
+  "private": true,
+  "description": "End-to-end UI tests for the Make-Up Clone e-commerce app (Playwright + TypeScript, Page Object Model)",
+  "scripts": {
+    "app:setup": "git clone https://github.com/ShVira/MakeUpClone.git app && npm ci --prefix app",
+    "test": "playwright test",
+    "test:chromium": "playwright test --project=chromium",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:headed": "playwright test --project=chromium --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "@types/node": "^24.10.1",
+    "typescript": "~5.9.3"
+  }
+}
